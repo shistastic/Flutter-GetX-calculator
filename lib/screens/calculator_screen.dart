@@ -30,17 +30,18 @@ class CalculatorScreen extends StatelessWidget {
                 CalculatorButton(
                   text: '+/-',
                   bgColor: Color(0xffA5A5A5),
-                  onPressed: () => print('+/-'),
+                  onPressed: () =>
+                      calculatorController.changeNegativePositive(),
                 ),
                 CalculatorButton(
                   text: 'del',
                   bgColor: Color(0xffA5A5A5),
-                  onPressed: () => print('del'),
+                  onPressed: () => calculatorController.deleteLastEntry(),
                 ),
                 CalculatorButton(
                   text: '/',
                   bgColor: Color(0xffF0A23B),
-                  onPressed: () => print('/'),
+                  onPressed: () => calculatorController.selectOperation("/"),
                 ),
               ],
             ),
@@ -49,20 +50,20 @@ class CalculatorScreen extends StatelessWidget {
               children: [
                 CalculatorButton(
                   text: '7',
-                  onPressed: () => print('7'),
+                  onPressed: () => calculatorController.addNumber("7"),
                 ),
                 CalculatorButton(
                   text: '8',
-                  onPressed: () => print('8'),
+                  onPressed: () => calculatorController.addNumber("8"),
                 ),
                 CalculatorButton(
                   text: '9',
-                  onPressed: () => print('9'),
+                  onPressed: () => calculatorController.addNumber("9"),
                 ),
                 CalculatorButton(
                   text: 'X',
                   bgColor: Color(0xffF0A23B),
-                  onPressed: () => print('X'),
+                  onPressed: () => calculatorController.selectOperation("X"),
                 ),
               ],
             ),
@@ -71,20 +72,20 @@ class CalculatorScreen extends StatelessWidget {
               children: [
                 CalculatorButton(
                   text: '4',
-                  onPressed: () => print('4'),
+                  onPressed: () => calculatorController.addNumber("4"),
                 ),
                 CalculatorButton(
                   text: '5',
-                  onPressed: () => print('5'),
+                  onPressed: () => calculatorController.addNumber("5"),
                 ),
                 CalculatorButton(
                   text: '6',
-                  onPressed: () => print('6'),
+                  onPressed: () => calculatorController.addNumber("6"),
                 ),
                 CalculatorButton(
                   text: '-',
                   bgColor: Color(0xffF0A23B),
-                  onPressed: () => print('-'),
+                  onPressed: () => calculatorController.selectOperation("-"),
                 ),
               ],
             ),
@@ -93,20 +94,20 @@ class CalculatorScreen extends StatelessWidget {
               children: [
                 CalculatorButton(
                   text: '1',
-                  onPressed: () => print('1'),
+                  onPressed: () => calculatorController.addNumber("1"),
                 ),
                 CalculatorButton(
                   text: '2',
-                  onPressed: () => print('2'),
+                  onPressed: () => calculatorController.addNumber("2"),
                 ),
                 CalculatorButton(
                   text: '3',
-                  onPressed: () => print('3'),
+                  onPressed: () => calculatorController.addNumber("3"),
                 ),
                 CalculatorButton(
                   text: '+',
                   bgColor: Color(0xffF0A23B),
-                  onPressed: () => print('+'),
+                  onPressed: () => calculatorController.selectOperation("+"),
                 ),
               ],
             ),
@@ -116,16 +117,16 @@ class CalculatorScreen extends StatelessWidget {
                 CalculatorButton(
                   text: '0',
                   big: true,
-                  onPressed: () => print('0'),
+                  onPressed: () => calculatorController.addNumber("0"),
                 ),
                 CalculatorButton(
                   text: '.',
-                  onPressed: () => print('.'),
+                  onPressed: () => calculatorController.addDecimalPoint(),
                 ),
                 CalculatorButton(
                   text: '=',
                   bgColor: Color(0xffF0A23B),
-                  onPressed: () => print('='),
+                  onPressed: () => calculatorController.calculateResult(),
                 ),
               ],
             ),
